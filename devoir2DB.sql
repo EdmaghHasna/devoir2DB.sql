@@ -55,9 +55,9 @@ Raise erreur_comm ;
 
     
 EXECPTION
-When NO_DATA_FOUND Then
-Insert into erreur VALUES(P_pilot.NOPILOTE,'NOM PILOTE-OK') ;
 When DATA_FOUND Then
+Insert into erreur VALUES(P_pilot.NOPILOTE,'NOM PILOTE-OK') ;
+When NO_DATA_FOUND Then
 Insert into erreur VALUES(P_pilot.NOPILOTE,'PILOTE INCONNU') ;
 When erreur_comm then
 Insert into erreur VALUES(v_pilot.nom, 'Commission > salaire') ;
